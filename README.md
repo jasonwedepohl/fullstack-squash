@@ -41,8 +41,8 @@ In TestFoo:
 ## Footnotes
 
 1. Changes to web page files must be kept to a minimum to reduce risk as they use loose binding.
-2. Use `var` in the case `Foo foo = new Foo()`, in the case `Foo foo = Something()` since foo is obviously a Foo, but NOT in the case `Foo result = Something()` since it won't be obvious what `result` is.
-3. Replace long-form string validation with `string.IsNullOrWhiteSpace()` and replace long-form null checking with use of a Validator class, e.g. `Validator.IsNull(foo, "Foo")` will throw with message "Foo cannot be null".
+2. Use `var` in the case `Foo foo = new Foo()`, in the case `Foo foo = Something()` since `foo` is obviously a `Foo`, but NOT in the case `Foo result = Something()` since it won't be obvious what `result` is.
+3. Replace long-form string validation with `string.IsNullOrWhiteSpace()` and replace long-form null checking with use of a Validator class, e.g. `Validator.NotNull(foo, "Foo")` will throw with message "Foo cannot be null".
 4. Some don't like to use the brace constructor since breakpoints can't be set on each assignment. If the object has a large number of properties being set by functions, a Builder class can be used instead of the braces to shorten the code.
 5. `ExpectedException` was removed from later versions of NUnit. Also, `Assert.Throws<FooException>()` is much more powerful and can be made less verbose by using a helper method containing it
 6. Builders can be reused: set one up and call `create()` using the same builder in multiple tests.
