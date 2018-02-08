@@ -38,7 +38,7 @@ In TestFoo:
 - Reorder class contents: constants, fields, constructors, properties, methods
 - Apply secondary ordering: public, internal, protected, private.
 
-### Footnotes
+## Footnotes
 
 1. Changes to web page files must be kept to a minimum to reduce risk as they use loose binding.
 2. Use `var` in the case `Foo foo = new Foo()`, in the case `Foo foo = Something()` since foo is obviously a Foo, but NOT in the case `Foo result = Something()` since it won't be obvious what `result` is.
